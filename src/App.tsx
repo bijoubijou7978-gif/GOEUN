@@ -5,6 +5,8 @@
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import MarketingCycle from "./components/MarketingCycle";
+import MarketingChannels from "./components/MarketingChannels";
 import PainPoints from "./components/PainPoints";
 import TrustIndicators from "./components/TrustIndicators";
 import Portfolio from "./components/Portfolio";
@@ -17,6 +19,8 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <MarketingCycle />
+        <MarketingChannels />
         <PainPoints />
         <TrustIndicators />
         <section id="portfolio">

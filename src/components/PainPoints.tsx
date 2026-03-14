@@ -24,12 +24,12 @@ const solutions = [
 
 export default function PainPoints() {
   return (
-    <section className="py-32 px-6 bg-oatmeal relative overflow-hidden">
+    <section className="py-16 md:py-32 px-6 bg-oatmeal relative overflow-hidden">
       {/* Decorative Background Element */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-navy/5 -skew-x-12 translate-x-1/2 pointer-events-none" />
 
       <div className="container mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 md:mb-20 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export default function PainPoints() {
             >
               Why Go-eun Marketing?
             </motion.span>
-            <h2 className="text-4xl md:text-5xl font-bold leading-[1.15] mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold leading-[1.15] mb-6">
               혹시 지금, 내 담당자가 누군지도 모른 채 <br />
               <span className="text-navy relative inline-block">
                 광고비만 내고 계신가요?

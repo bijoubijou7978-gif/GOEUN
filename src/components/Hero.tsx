@@ -23,7 +23,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-4xl md:text-6xl font-bold leading-tight mb-6"
+            className="text-3xl md:text-6xl font-bold leading-tight mb-6"
           >
             대표의 모든 노하우를 <br />
             <span className="text-coral">1:1</span>로 쏟아붓습니다.
@@ -33,7 +33,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="text-lg text-charcoal/70 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
+            className="text-base md:text-lg text-charcoal/70 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
           >
             수십 개의 업체를 기계적으로 관리하지 않습니다. <br />
             고은마케팅은 소수 정예 1:1 관리 시스템으로 <br />

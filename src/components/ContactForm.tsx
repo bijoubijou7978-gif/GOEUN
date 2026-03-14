@@ -84,14 +84,14 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 bg-oatmeal">
+    <section id="contact" className="py-16 md:py-24 px-6 bg-oatmeal">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold mb-6"
+            className="text-2xl md:text-4xl font-bold mb-6"
           >
             내 사업을 가장 잘 이해해 줄 마케팅 파트너, <br />
             지금 바로 대표와 1:1로 상의하세요.
@@ -102,7 +102,7 @@ export default function ContactForm() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="bg-white p-8 md:p-12 rounded-[2rem] shadow-2xl shadow-charcoal/5"
+          className="bg-white p-6 md:p-12 rounded-[2rem] shadow-2xl shadow-charcoal/5"
         >
           {isSubmitted ? (
             <motion.div 

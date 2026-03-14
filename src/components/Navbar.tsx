@@ -1,14 +1,18 @@
-import { motion } from "motion/react";
-import { Phone, MessageCircle } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
+import { Phone, MessageCircle, Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-ivory/80 backdrop-blur-md border-b border-charcoal/5">
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-        <a href="/" className="text-2xl font-black tracking-tighter text-navy">
+        <a href="/" className="text-xl md:text-2xl font-black tracking-tighter text-navy">
           GOEUN <span className="text-coral">MARKETING</span>
         </a>
         
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           <a href="#portfolio" className="text-sm font-semibold hover:text-coral transition-colors">포트폴리오</a>
           <a href="#contact" className="text-sm font-semibold hover:text-coral transition-colors">상담신청</a>
@@ -21,6 +25,48 @@ export default function Navbar() {
           </a>
         </div>
 
+        {/* Mobile Menu Toggle */}
+        <button 
+          className="md:hidden p-2 text-navy"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+
+        {/* Mobile Menu Overlay */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="absolute top-20 left-0 right-0 bg-white border-b border-charcoal/5 p-6 flex flex-col gap-6 md:hidden shadow-xl"
+            >
+              <a 
+                href="#portfolio" 
+                onClick={() => setIsOpen(false)}
+                className="text-lg font-bold text-charcoal"
+              >
+                포트폴리오
+              </a>
+              <a 
+                href="#contact" 
+                onClick={() => setIsOpen(false)}
+                className="text-lg font-bold text-charcoal"
+              >
+                상담신청
+              </a>
+              <a 
+                href="tel:010-6542-3522" 
+                className="flex items-center justify-center gap-2 bg-navy text-white py-4 rounded-2xl font-bold"
+              >
+                <Phone className="w-5 h-5" />
+                지금 바로 전화상담
+              </a>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        
         {/* Floating Action Buttons for Mobile */}
         <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50 md:hidden">
           <motion.a

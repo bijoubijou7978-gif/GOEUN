@@ -1,7 +1,7 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import * as React from 'react';
 
 interface Props {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 interface State {
@@ -9,7 +9,7 @@ interface State {
   error: Error | null;
 }
 
-class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundary extends React.Component<any, any> {
   public state: State = {
     hasError: false,
     error: null
@@ -19,12 +19,15 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Uncaught error:', error, errorInfo);
   }
 
   public render() {
-    if (this.state.hasError) {
+    const { hasError, error } = this.state;
+    const { children } = (this as any).props;
+
+    if (hasError) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-ivory p-6 text-center">
           <div className="max-w-md bg-white p-8 rounded-3xl shadow-xl">
@@ -34,7 +37,7 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             <div className="bg-red-50 p-4 rounded-xl text-left mb-6 overflow-auto max-h-40">
               <code className="text-xs text-red-600">
-                {this.state.error?.toString()}
+                {error?.toString()}
               </code>
             </div>
             <button
@@ -48,7 +51,7 @@ class ErrorBoundary extends Component<Props, State> {
       );
     }
 
-    return this.props.children;
+    return children;
   }
 }
 
