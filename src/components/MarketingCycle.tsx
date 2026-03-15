@@ -34,7 +34,7 @@ const services = [
 
 export default function MarketingCycle() {
   return (
-    <section className="py-24 px-6 bg-white overflow-hidden">
+    <section className="py-24 px-6 bg-beige overflow-hidden">
       <div className="container mx-auto">
         <div className="text-center mb-20">
           <motion.span 
@@ -91,7 +91,7 @@ export default function MarketingCycle() {
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="mt-20 bg-navy rounded-[3rem] p-8 md:p-16 text-white relative overflow-hidden"
+          className="mt-20 bg-espresso rounded-[3rem] p-8 md:p-16 text-white relative overflow-hidden"
         >
           {/* Decorative Circle */}
           <div className="absolute -right-20 -top-20 w-64 h-64 bg-coral/20 rounded-full blur-3xl" />

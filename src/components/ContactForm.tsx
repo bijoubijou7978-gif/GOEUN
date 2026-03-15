@@ -84,14 +84,14 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 px-6 bg-oatmeal">
+    <section id="contact" className="py-16 md:py-24 px-6 bg-navy text-white">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-12 md:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-bold mb-6"
+            className="text-2xl md:text-4xl font-bold mb-6 text-white"
           >
             내 사업을 가장 잘 이해해 줄 마케팅 파트너, <br />
             지금 바로 대표와 1:1로 상의하세요.
@@ -102,7 +102,7 @@ export default function ContactForm() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="bg-white p-6 md:p-12 rounded-[2rem] shadow-2xl shadow-charcoal/5"
+          className="bg-white text-charcoal p-6 md:p-12 rounded-[2rem] shadow-2xl shadow-charcoal/5"
         >
           {isSubmitted ? (
             <motion.div 
@@ -131,7 +131,7 @@ export default function ContactForm() {
                       id={field.id}
                       name={field.id}
                       required
-                      className="w-full bg-ivory border-2 border-transparent focus:border-navy rounded-2xl px-6 py-4 outline-none transition-all peer placeholder-transparent"
+                      className="w-full bg-gray-50 border-2 border-gray-100 focus:bg-white focus:border-navy rounded-2xl px-6 py-4 outline-none transition-all peer placeholder-transparent"
                       placeholder={field.placeholder}
                     />
                     <label
@@ -156,7 +156,7 @@ export default function ContactForm() {
                       className={`px-6 py-3 rounded-full text-sm font-medium transition-all transform active:scale-95 ${
                         selectedOptions.includes(option)
                           ? "bg-navy text-white shadow-lg scale-105"
-                          : "bg-ivory text-charcoal/60 hover:bg-charcoal/5"
+                          : "bg-gray-100 text-charcoal/60 hover:bg-gray-200"
                       }`}
                     >
                       {option}
@@ -166,17 +166,20 @@ export default function ContactForm() {
               </div>
 
               {/* Textarea with character count */}
-              <div className="relative">
-                <textarea
-                  required
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  maxLength={500}
-                  className="w-full bg-ivory border-2 border-transparent focus:border-navy rounded-2xl px-6 py-4 min-h-[150px] outline-none transition-all"
-                  placeholder="예: 체육관 신규 원생 문의가 줄었어요, 펜션 비수기 예약이 안 잡혀요 등 현재 가장 답답한 점을 편하게 남겨주세요."
-                />
-                <div className="absolute bottom-4 right-4 text-xs text-charcoal/40">
-                  {message.length} / 500자
+              <div>
+                <p className="text-sm font-bold mb-4 text-charcoal/70">지금 제일 고민이 되는부분을 알려주세요.(500자)</p>
+                <div className="relative">
+                  <textarea
+                    required
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    maxLength={500}
+                    className="w-full bg-gray-50 border-2 border-gray-100 focus:bg-white focus:border-navy rounded-2xl px-6 py-4 min-h-[150px] outline-none transition-all"
+                    placeholder="예: 체육관 신규 원생 문의가 줄었어요, 펜션 비수기 예약이 안 잡혀요 등 현재 가장 답답한 점을 편하게 남겨주세요."
+                  />
+                  <div className="absolute bottom-4 right-4 text-xs text-charcoal/40">
+                    {message.length} / 500자
+                  </div>
                 </div>
               </div>
 

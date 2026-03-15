@@ -4,27 +4,27 @@ import { MessageSquare, Target, BarChart3 } from "lucide-react";
 const solutions = [
   {
     icon: <MessageSquare className="w-10 h-10 text-white" />,
-    title: "철저한 소통",
-    description: "담당자가 누군지도 모르는 대행사는 그만. 대표와 직접 소통하며 실시간 피드백을 주고받습니다.",
+    title: "대표 직접 1:1 밀착 관리",
+    description: "수시로 바뀌는 담당자, 느린 피드백에 지치셨나요? 고은마케팅은 대표가 직접 모든 과정을 1:1로 통제하며 압도적인 속도와 퀄리티를 보장합니다.",
     tag: "Communication"
   },
   {
     icon: <Target className="w-10 h-10 text-white" />,
-    title: "맞춤 기획",
-    description: "업종별 특성을 무시한 기계적인 광고가 아닌, 브랜드의 강점을 극대화하는 맞춤형 전략을 수립합니다.",
+    title: "매출 직결형 맞춤 전략",
+    description: "남들과 똑같은 템플릿, 기계적인 복붙 포스팅은 안 합니다. 오직 대표님의 브랜드만을 위한 치열한 분석으로 매출을 견인하는 전략을 짭니다.",
     tag: "Strategy"
   },
   {
     icon: <BarChart3 className="w-10 h-10 text-white" />,
-    title: "투명한 보고",
-    description: "복잡한 용어로 가득한 보고서 대신, 실제 매출과 직결되는 핵심 성과를 투명하게 공유합니다.",
+    title: "성과 중심의 투명한 데이터",
+    description: "의미 없는 조회수나 허수 트래픽으로 포장하지 않습니다. 실제 유입과 전환, 그리고 매출이 어떻게 달라졌는지 팩트 기반의 데이터로만 보고합니다.",
     tag: "Reporting"
   }
 ];
 
 export default function PainPoints() {
   return (
-    <section className="py-16 md:py-32 px-6 bg-oatmeal relative overflow-hidden">
+    <section className="py-16 md:py-32 px-6 bg-white relative overflow-hidden">
       {/* Decorative Background Element */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-navy/5 -skew-x-12 translate-x-1/2 pointer-events-none" />
 
@@ -42,12 +42,12 @@ export default function PainPoints() {
               whileInView={{ opacity: 1 }}
               className="inline-block px-4 py-1.5 bg-coral/10 text-coral text-sm font-bold rounded-full mb-6"
             >
-              Why Go-eun Marketing?
+              Why GOEUN Marketing?
             </motion.span>
             <h2 className="text-3xl md:text-5xl font-bold leading-[1.15] mb-6">
-              혹시 지금, 내 담당자가 누군지도 모른 채 <br />
-              <span className="text-navy relative inline-block">
-                광고비만 내고 계신가요?
+              담당자가 누군지도 모르는 공장형 대행사, <br />
+              언제까지 <span className="text-navy relative inline-block">
+                광고비만 버리실 건가요?
                 <motion.div 
                   initial={{ width: 0 }}
                   whileInView={{ width: "100%" }}
@@ -62,10 +62,10 @@ export default function PainPoints() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-lg text-charcoal/60 lg:max-w-sm pb-2"
+            className="text-lg text-charcoal/60 lg:max-w-sm pb-2 font-medium leading-relaxed"
           >
-            대행사에 지친 광고주님들의 마음을 누구보다 잘 압니다. <br />
-            고은마케팅은 '진짜 파트너'로서 해결책을 제시합니다.
+            단순 노출만 약속하고 책임지지 않는 마케팅은 끝났습니다. <br />
+            고은마케팅은 오직 <strong className="text-navy font-bold">'매출 상승'</strong>이라는 결과로만 증명하는 진짜 파트너입니다.
           </motion.p>
         </div>
 

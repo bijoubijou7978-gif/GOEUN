@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ivory: #FDFBF7;
-  --color-oatmeal: #F5F4F0;
-  --color-charcoal: #333333;
-  --color-navy: #2C3E50;
-  --color-coral: #FF7F50;
+  /* 1. 모던 트러스트 (Modern Trust) 기반 커스텀 */
+  --color-ivory: #FFFFFF; /* 기본 배경 (순백색) */
+  --color-oatmeal: #E2E8F0; /* 섹션 배경 (기본보다 진하게, Slate 200) */
+  --color-beige: #E2E8F0; /* 섹션 배경 동일 적용 */
+  --color-espresso: #0F172A; /* 다크 박스 (Slate 900) */
+  --color-charcoal: #334155; /* 서브 텍스트 (Slate 700) */
+  --color-navy: #0F172A; /* 메인 텍스트 & 다크 섹션 (Slate 900) */
+  --color-coral: #E05D36; /* 요청하신 포인트 컬러 */
   
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }

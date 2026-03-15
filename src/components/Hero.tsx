@@ -14,50 +14,32 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-navy font-medium mb-4 tracking-wide"
+            className="text-coral font-bold mb-4 tracking-widest text-sm md:text-base"
           >
-            단 한 곳의 파트너를 위해
+            매출의 판도를 바꾸는 압도적 마케팅
           </motion.p>
           
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-3xl md:text-6xl font-bold leading-tight mb-6"
+            className="text-4xl md:text-6xl lg:text-[4.5rem] font-black leading-[1.15] mb-6 text-navy tracking-tight"
           >
-            대표의 모든 노하우를 <br />
-            <span className="text-coral">1:1</span>로 쏟아붓습니다.
+            공장형 대행사에 <br />
+            지치셨습니까? <br />
+            <span className="text-coral">결과로 증명</span>합니다.
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="text-base md:text-lg text-charcoal/70 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
+            className="text-lg md:text-xl text-charcoal/80 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium"
           >
-            수십 개의 업체를 기계적으로 관리하지 않습니다. <br />
-            고은마케팅은 소수 정예 1:1 관리 시스템으로 <br />
-            내 사업처럼 치열하게 고민하고 성과를 만듭니다.
+            단순히 상위 노출만 약속하는 마케팅은 죽었습니다. <br />
+            고은마케팅은 오직 <strong className="text-navy font-bold">소수 정예 파트너</strong>만을 위해 <br />
+            대표가 직접 모든 사이클을 통제하고 <strong className="text-navy font-bold">압도적인 매출 성과</strong>를 만듭니다.
           </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ 
-              type: "spring", 
-              stiffness: 260, 
-              damping: 20, 
-              delay: 1.2 
-            }}
-          >
-            <a
-              href="#contact"
-              className="group inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-navy/90 transition-all shadow-lg hover:shadow-navy/20"
-            >
-              대표 1:1 무료 상담 신청하기
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </motion.div>
         </div>
 
         <div className="hidden lg:block relative">

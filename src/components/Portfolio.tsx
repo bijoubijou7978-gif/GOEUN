@@ -33,7 +33,7 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section className="py-24 px-6 bg-white">
+    <section className="py-24 px-6 bg-oatmeal">
       <div className="container mx-auto">
         <div className="mb-16 text-center">
           <motion.h2
